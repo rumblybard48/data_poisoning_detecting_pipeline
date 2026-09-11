@@ -1,0 +1,13 @@
+Metric,Value
+Accuracy,0.9420922602972654
+Log-Loss (Cross-Entropy),0.16904460987565287
+Precision,0.9392454630384226
+Recall (Detection Rate / TPR),0.9453241440017605
+F1-Score,0.9422750001246329
+False Positive Rate (FPR),0.061139170875631345
+False Discovery Rate (FDR),0.060754536961577454
+True Positives (TP),94505
+True Negatives (TN),93872
+False Positives (FP),6113
+False Negatives (FN),5466
+ROC-AUC,0.9840588984587598

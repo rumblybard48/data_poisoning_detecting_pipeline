@@ -1,0 +1,35 @@
+==================================================
+             DETAILED EVALUATION REPORT           
+==================================================
+True Positives (TP)             : 90104
+True Negatives (TN)             : 98494
+False Positives (FP)            : 1491 // benign classified as malicious
+False Negatives (FN)            : 9867 // opposite of the above
+Accuracy                        : 0.943198
+Balanced Accuracy               : 0.943195
+Precision (PPV)                 : 0.983722
+Recall (TPR / Detection Rate)   : 0.901301
+Specificity (TNR)               : 0.985088
+Negative Predictive Value (NPV) : 0.908943
+False Positive Rate (FPR)       : 0.014912
+False Negative Rate (FNR)       : 0.098699
+False Discovery Rate (FDR)      : 0.016278
+F1-Score                        : 0.940710
+F0.5-Score (Precision Favored)  : 0.966053F2-Score (Recall Favored)       : 0.916662
+Matthews Corr Coef (MCC)        : 0.889522
+Cohen's Kappa                   : 0.886394
+ROC-AUC                         : 0.990515
+PR-AUC (Average Precision)      : 0.990943
+Log-Loss (Cross-Entropy)        : 0.253058
+Brier Score Loss                : 0.068932
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+           0     0.9089    0.9851    0.9455     99985
+           1     0.9837    0.9013    0.9407     99971
+
+    accuracy                         0.9432    199956
+   macro avg     0.9463    0.9432    0.9431    199956
+weighted avg     0.9463    0.9432    0.9431    199956

@@ -1,0 +1,5 @@
+matplotlib==3.11.1
+numpy==2.5.3
+polars==1.44.2
+PyYAML==6.0.3
+scikit_learn==1.9.1

@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / cached files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Large dataset caches and raw telemetry
+data/raw/*.csv
+data/raw/*.parquet
+data/processed/*.parquet
+model/data/raw/*.csv
+model/data/raw/*.parquet
+model/data/processed/*.parquet
+auto_holdout_test.parquet
+
+# Generated model weights and checkpoints
+model/models/lightgbm/*.txt
+model/models/lightgbm/*.bin
+model/models/lightgbm/*.joblib
+*.model
+
+# Run evaluations, generated figures, and output tables
+reports/save_*/
+reports/*.csv
+reports/*.png
+reports/test_predictions.csv
+
+# IDE and operating system metadata
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Docker and environment artifacts
+.dockerignore
+.env

@@ -1,0 +1,34 @@
+data:
+  data:
+  raw_train_csv: "model/data/raw/train_data.csv"
+  raw_test_csv: "model/data/raw/trigger_test_data.csv"
+  train_parquet_path: "model/data/processed/train_data.parquet"
+  test_parquet_path: "model/data/processed/trigger_test_data.parquet"
+  target_column: "Label"
+  
+  # Dynamic allocation settings
+  val_size: 0.1             # 10% of train file allocated dynamically to validation
+  test_split_ratio: 0.2     # Used ONLY if a standalone test CSV is not provided
+  random_state: 42
+
+model:
+  save_dir: "models/lightgbm"
+  # Save to a distinct filename so your clean baseline model is preserved
+  model_filename: "lightgbm_model_poisoned.txt"
+  params:
+    objective: "binary"
+    metric: "binary_logloss"
+    boosting_type: "gbdt"
+    learning_rate: 0.03          # Reduced from 0.05 to prevent step-size overshooting
+    num_leaves: 31
+    max_depth: 6                 # Explicit depth cap to prevent deep, isolated splits
+    min_child_samples: 50        # Requires at least 50 samples per leaf to suppress noise
+    max_bin: 128
+    feature_fraction: 0.8        # Subsamples features per iteration
+    subsample: 0.8               # Subsamples rows per iteration
+    subsample_freq: 1
+    reg_alpha: 1.0               # L1 penalty on leaf weights
+    reg_lambda: 5.0              # L2 penalty to pull extreme logits away from 0/1
+    verbose: -1
+  num_boost_round: 1000
+  early_stopping_rounds: 50
